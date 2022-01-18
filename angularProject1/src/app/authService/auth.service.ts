@@ -8,7 +8,11 @@ export class AuthService {
     const regPassVal = localStorage.getItem('itemsSetPass')
     const loginEmailVal = localStorage.getItem('loginEmailVal')
     const loginPassVal = localStorage.getItem('loginPassVal')
-    if (regEmailVal === loginEmailVal && regPassVal === loginPassVal) {
+    if(regEmailVal===null){
+      window.alert('kindly login to view this page')
+      return false
+    }
+    else if (regEmailVal === loginEmailVal && regPassVal === loginPassVal) {
       console.log(regEmailVal);
       console.log(loginEmailVal);
       console.log(regPassVal);

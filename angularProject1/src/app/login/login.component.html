@@ -12,9 +12,10 @@
               <input #passInp='ngModel' name="passInp" type="password" class="form-control" required id="exampleInputPassword1" ngModel>
               <span style="color: red;" *ngIf='passInp.invalid && passInp.touched'>**please Enter password in proper format</span>
             </div>
-            <button type="submit"[disabled]='regForm.invalid' class="btn btn-primary" >Login</button>
+            <button type="submit"[disabled]='regForm.invalid' class="btn btn-primary" >Login </button>
           </form>
         </div>
         <br>
         <button class="btn btn-danger" (click)=clearDB()>ClearLocalDB</button>        
       </div>
+<router-outlet></router-outlet>
